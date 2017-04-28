@@ -1,6 +1,8 @@
 node {
   stage('test') {
-     sh 'ls'
+    steps {
+      sh 'ls'
+    }
   }
   stage('deploy') {
      sh 'echo'
