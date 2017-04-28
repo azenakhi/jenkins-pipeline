@@ -9,7 +9,7 @@ pipeline {
             
           },
           "Test2": {
-            git(poll: true, url: 'git@github.com:azenakhi/go-learn.git', branch: 'master')
+            git(poll: true, url: 'git@github.com:azenakhi/go-learn.git', branch: 'master', credentialsId: '5d3cbd61-f5e9-4658-82fd-db4fba6c06e2')
             
           }
         )
