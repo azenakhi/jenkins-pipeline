@@ -1,12 +1,15 @@
 pipeline {
-    node {
-      stage('test') {
-        steps {
-          sh 'ls'
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
         }
-      }
-      stage('deploy') {
-         sh 'echo'
-      }
+    }
+    post { 
+        always { 
+            echo 'I will always say Hello again!'
+        }
     }
 }
