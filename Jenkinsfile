@@ -17,8 +17,17 @@ pipeline {
     }
     stage('Install') {
       steps {
-        sh '''#!/bin/bash
+        parallel(
+          "Install": {
+            sh '''#!/bin/bash
 echo "hello world"'''
+            
+          },
+          "Install2": {
+            writeFile(file: 'test.txt', text: 'toto')
+            
+          }
+        )
       }
     }
   }
