@@ -1,10 +1,12 @@
-node {
-  stage('test') {
-    steps {
-      sh 'ls'
+pipeline {
+    node {
+      stage('test') {
+        steps {
+          sh 'ls'
+        }
+      }
+      stage('deploy') {
+         sh 'echo'
+      }
     }
-  }
-  stage('deploy') {
-     sh 'echo'
-  }
 }
