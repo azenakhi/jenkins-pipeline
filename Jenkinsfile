@@ -6,6 +6,12 @@ pipeline {
         echo 'hello world'
       }
     }
+    stage('Install') {
+      steps {
+        sh '''#!/bin/bash
+echo "hello world"'''
+      }
+    }
   }
   post {
     always {
