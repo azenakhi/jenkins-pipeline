@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Test') {
+    stage('TestCDaaS') {
       steps {
         parallel(
           "Test": {
@@ -15,7 +15,7 @@ pipeline {
         )
       }
     }
-    stage('Install') {
+    stage('InstallCDaaS') {
       steps {
         parallel(
           "Install": {
