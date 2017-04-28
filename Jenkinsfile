@@ -3,7 +3,16 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        echo 'hello world'
+        parallel(
+          "Test": {
+            echo 'hello world'
+            
+          },
+          "Test2": {
+            git(poll: true, url: 'git@github.com:azenakhi/go-learn.git', branch: 'master')
+            
+          }
+        )
       }
     }
     stage('Install') {
