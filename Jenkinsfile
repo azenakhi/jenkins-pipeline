@@ -16,7 +16,7 @@ pipeline {
       
     }
     failure {
-      echo 'I will always say Hello again!'
+      echo 'I will fail'
       
     }
     
