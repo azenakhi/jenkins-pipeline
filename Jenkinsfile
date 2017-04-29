@@ -1,9 +1,11 @@
+@Library('mylib') _
 pipeline {
   agent any
   stages {
     stage('Test') {
       steps {
         echo 'hello world'
+        sendNotification 'SUCCESS'
       }
     }
   }
