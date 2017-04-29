@@ -6,6 +6,7 @@ pipeline {
       steps {
         echo 'hello world'
         sendNotifications 'SUCCESS'
+        sh 'exit 1'
       }
     }
   }
@@ -14,11 +15,10 @@ pipeline {
       echo 'I will always say Hello again!'
       
     }
-    
-  }
-  notifications {
-    success {
-        sh 'echo hello'
+    failure {
+      echo 'I will always say Hello again!'
+      
     }
+    
   }
 }
