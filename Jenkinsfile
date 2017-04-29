@@ -19,7 +19,7 @@ pipeline {
       
     }
     failure {
-      echo 'I will fail ${FOO}'
+      echo 'I will fail "${FOO}"'
       
     }
     
