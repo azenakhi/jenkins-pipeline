@@ -5,7 +5,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'hello world'
-        sendNotification 'SUCCESS'
+        sendNotifications 'SUCCESS'
       }
     }
   }
