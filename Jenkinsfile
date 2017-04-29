@@ -14,11 +14,11 @@ pipeline {
   }
   post {
     always {
-      echo 'I will always say Hello again!'
+      echo 'I will always say Hello again! : "${FOO}"'
       
     }
     failure {
-      echo 'I will fail "${FOO}"'
+      echo 'I will fail'
       
     }
     
