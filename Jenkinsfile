@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        echo 'hello world ${params.PERSON}'
+        echo "hello world ${params.PERSON}"
         sendNotifications 'SUCCESS'
       }
     }
