@@ -1,7 +1,7 @@
 @Library('mylib') _
 pipeline {
   agent any
-  environement {
+  environment {
     FOO = 'my message'
   }
   stages {
