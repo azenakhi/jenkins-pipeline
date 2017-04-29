@@ -5,9 +5,8 @@ pipeline {
     FOO = 'my message'
   }
   parameters {
-     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+     string(name: 'PERSON', choices: ['TESTING', 'STAGING', 'PRODUCTION'], description: 'Who should I say hello to?')
      booleanParam(name: 'DEBUG_BUILD', defaultValue: true, description: '')
-     choices: ['TESTING', 'STAGING', 'PRODUCTION']
   }
   stages {
     stage('Test') {
