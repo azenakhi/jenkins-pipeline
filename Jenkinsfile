@@ -16,4 +16,9 @@ pipeline {
     }
     
   }
+  notifications {
+    success {
+        sh 'echo hello'
+    }
+  }
 }
