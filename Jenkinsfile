@@ -10,14 +10,14 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        echo 'hello world'
+        echo 'hello world ${params.PERSON}'
         sendNotifications 'SUCCESS'
       }
     }
   }
   post {
     always {
-      echo 'I will always say Hello again! : ${params.PERSON}'
+      echo 'I will always say Hello again! :'
       
     }
     failure {
